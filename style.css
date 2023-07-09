@@ -1,0 +1,444 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600');
+
+body {
+	background: #d1dce7;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	line-height: 1.5em;
+	padding: 15px;
+	text-align: center;
+	background: #048;
+	background-attachment: fixed;
+	color: #fff;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 140%;
+	margin: 0;
+	height: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+h1 {
+	margin-bottom: 5px;
+}
+
+.subheading {
+	font-size: .9em;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+dl {
+	margin: 30px auto 60px;
+	max-width: 300px;
+}
+
+dt {
+	background: #505662;
+	border-left: 8px solid #1F2024;
+	color: #B6BCCC;
+	font-weight: 600;
+	padding: 15px;
+	position: relative;
+	text-align: left;
+	text-transform: uppercase;
+	transition: all .5s;
+}
+
+dt:after,
+dt:before {
+	content: "\f078";
+	font-family: fontAwesome;
+	position: absolute;
+	right: 15px;
+	height: 28px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+
+	transition: all .7s ease-in-out;
+}
+
+dt:before {
+	opacity: 0;
+	transition: all .4s ease-in-out;
+}
+
+dt:hover {
+	cursor: pointer;
+}
+
+dt+dd {
+	max-height: 0;
+}
+
+dd {
+	background: #1C1C1C;
+	color: #edeff3;
+	margin: 0;
+	overflow: hidden;
+	padding: 1px 15px;
+
+	transition: all .5s;
+}
+
+dt.open {
+	background: #0E0C0D;
+	border-color: #0E0C0D;
+	color: #edeff3;
+	margin: -5px;
+}
+
+dt.open:after {
+	transform: rotate(180deg) translateY(-2px);
+}
+
+dt.open:before {
+	opacity: 1;
+	transform: rotate(-360deg) translateY(-3px);
+}
+
+dt.open+dd {
+	padding: 15px 15px 30px;
+	margin: 0 -5px;
+	max-height: 200px;
+}
+
+
+
+
+
+.page_title,
+.what_to_do {
+	font-weight: 300;
+	line-height: 120%;
+	text-align: center;
+	text-shadow: 0 1px 5px rgba(0, 0, 0, .8);
+	text-transform: uppercase;
+}
+
+/* PEN STYLES ========== */
+a,
+.side_menu {
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+/* MENU CONTAINER ----- */
+.side_menu {
+	background: rgba(0, 20, 60, .9);
+	height: 100vh;
+	left: -250px;
+	position: fixed;
+	top: 0;
+	width: 250px;
+}
+
+.side_menu .container {
+	padding: 0 1em;
+}
+
+/* HAMBURGER STYLES ----- */
+.burger_box {
+	display: block;
+	float: right;
+	margin-right: -45px;
+}
+
+.burger_box a.menu-icon {
+	display: inline-block;
+	float: none;
+	height: 25px;
+	padding: 10px;
+	opacity: .5;
+	width: 25px;
+	z-index: 100;
+}
+
+.burger_box a.menu-icon:hover,
+.burger_box a.menu-icon.opened {
+	opacity: 1;
+}
+
+.burger_box a.menu-icon.opened {
+	background: rgba(0, 20, 60, .9);
+}
+
+.burger_box .menu-icon_box {
+	display: inline-block;
+	height: 25px;
+	position: relative;
+	text-align: left;
+	width: 25px;
+}
+
+.burger_box .menu-icon_line {
+	background: #fff;
+	border-radius: 2px;
+	display: inline-block;
+	height: 3px;
+	position: absolute;
+	width: 100%;
+}
+
+.burger_box .menu-icon_line--1 {
+	top: 2px;
+}
+
+.burger_box .menu-icon_line--2 {
+	top: 10px;
+}
+
+.burger_box .menu-icon_line--3 {
+	top: 18px;
+}
+
+.burger_box .menu-icon_line--1 {
+	transition: top 200ms 250ms, transform 200ms;
+	-webkit-transition: top 200ms 250ms, -webkit-transform 200ms;
+}
+
+.burger_box .menu-icon_line--2 {
+	transition: opacity 0ms 300ms;
+	-webkit-transition: opacity 0ms 300ms;
+}
+
+.burger_box .menu-icon_line--3 {
+	transition: top 100ms 300ms, transform 200ms;
+	-webkit-transition: top 100ms 300ms, -webkit-transform 200ms;
+}
+
+.burger_box .menu-icon.opened .menu-icon_box {
+	transform: scale3d(0.9, 0.9, 0.9);
+	-webkit-transform: scale3d(0.9, 0.9, 0.9);
+}
+
+.burger_box .menu-icon.opened .menu-icon_line {
+	top: 10px;
+}
+
+.burger_box .menu-icon.opened .menu-icon_line--1 {
+	transform: rotate3d(0, 0, 1, 45deg);
+	-webkit-transform: rotate3d(0, 0, 1, 45deg);
+	transition: top 100ms, transform 200ms 250ms;
+	-webkit-transition: top 100ms, -webkit-transform 200ms 250ms;
+}
+
+.burger_box .menu-icon.opened .menu-icon_line--2 {
+	opacity: 0;
+	transition: opacity 200ms;
+	-webkit-transition: opacity 200ms;
+}
+
+.burger_box .menu-icon.opened .menu-icon_line--3 {
+	transform: rotate3d(0, 0, 1, -45deg);
+	-webkit-transform: rotate3d(0, 0, 1, -45deg);
+	transition: top 200ms, transform 200ms 250ms;
+	-webkit-transition: top 200ms, -webkit-transform 200ms 250ms;
+}
+
+/* STAGGER LIST ----- */
+.list_load {
+	display: none;
+	list-style: none;
+	padding: 0;
+}
+
+.list_item {
+	margin-left: -20px;
+	opacity: 0;
+	-webkit-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.list_item a {
+	color: #fff;
+	display: block;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+.list_item a:hover {
+	background: rgba(255, 255, 255, .2);
+}
+
+/*  الاعلانات الألماسية */
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+ 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a68', endColorstr='#5ac8fb',GradientType=1 );
+}
+
+.card {
+  /* Remove this for use */
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(-50%) !important;
+}
+
+.card {
+  display: block;
+  position: relative;
+  width: 500px;
+  height: 260px;
+  border-radius: 2px;
+  background: #FAFAFA;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.card .card-image {
+  display: block;
+  position: relative;
+  width: 500px;
+  height: 210px;
+  background-image: url('https://4.bp.blogspot.com/-T_k03UFtS8k/U96RDVp8ebI/AAAAAAABF5E/4107zIbo29U/s0/Google+IO+Landscape_HD.jpg');
+  background-size: cover;
+  background-position: 50% 20%;
+  
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card.active .card-image {
+  background-position: 50% 50%;
+}
+
+.card .card-image h1 {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  margin: 0;
+  padding: 0;
+  color: #FAFAFA;
+  font-weight: 300;
+  
+  transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.card.active .card-image h1 {
+  bottom: 100px;
+}
+
+.card .card-body {
+  position: absolute;
+  display: block;
+  bottom: -210px;
+  left: 0;
+  width: 500px;
+  height: 260px;
+  background: #FAFAFA;
+  padding: 0 15px;
+  box-sizing: border-box;
+  
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card.active .card-body {
+  bottom: 0;
+}
+
+.card .card-body .controls {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.card .card-body .controls a {
+  position: relative;
+  display: block;
+  float: right;
+  height: 50px;
+  width: 50px;
+  color: #737373;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card .card-body .controls a[data-action="drawer"] {
+  float: left;
+}
+
+.card .card-body .controls a[data-action="drawer"] i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  transition: opacity 0.32s ease, transform 0.32s ease, color 0.22s ease;
+}
+
+.card .card-body .controls a[data-action="drawer"] i.down {
+  opacity: 0;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.card.active .card-body .controls a[data-action="drawer"] i.down {
+  opacity: 1;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.card .card-body .controls a[data-action="drawer"] i.up {
+  opacity: 1;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.card.active .card-body .controls a[data-action="drawer"] i.up {
+  opacity: 0;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.card .card-body .controls a:hover {
+  color: #4183D7;
+}
+
+.card .card-body .controls a[data-action="share"]:hover {
+  color: #4183D7;
+}
+
+.card .card-body .controls a[data-action="bookmark"]:hover {
+  color: #F9BF3B;
+}
+
+.card .card-body .controls a[data-action="favorite"]:hover {
+  color: #D24D57;
+}
+
+.card .card-body h1 {
+  display: block;
+  padding: 0;
+  margin: 0 0 20px 0;
+  color: #323232;
+  font-size: 20px;
+}
+
+.card .card-body p {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  color: #737373;
+  font-size: 16px;
+  text-align: left;
+  opacity: 0;
+  padding: 40px 0 0 0;
+  font-weight: 400;
+  
+  transition: padding 0.4s cubic-bezier(.25,.8,.25,1), opacity 0.5s cubic-bezier(.25,.8,.25,1);
+  transition-delay: 0.1s;
+}
+
+.card.active .card-body p {
+  opacity: 1;
+  padding: 0;
+}
